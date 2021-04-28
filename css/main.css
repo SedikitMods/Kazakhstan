@@ -83,13 +83,13 @@ body {
       padding-top: 10px;
       text-shadow: 2px 2px 2px #fdc407; }
     #header .header__top .header__top__menu {
-      padding-top: 15px;
+      padding-top: 18px;
       text-align: right; }
       #header .header__top .header__top__menu ul > li {
         display: inline-block;
         margin-right: 35px; }
         #header .header__top .header__top__menu ul > li > a {
-          font-size: 20px;
+          font-size: 21px;
           font-weight: bold;
           text-decoration: none;
           color: black; }
@@ -153,13 +153,12 @@ body {
   display: none;
   background-color: black;
   border-radius: 15px;
-  /*font-weight: bold;*/
   color: #fdc407;
   position: absolute;
   padding: 20px;
   box-sizing: border-box;
-  width: 200px;
-  height: 400px;
+  width: 16%;
+  height: 60%;
   box-shadow: 0 0 12px 4px #fdc407;
   left: 10px;
   bottom: calc(50% - 250px);
@@ -175,14 +174,26 @@ body {
 }
 
 .ornament2 {
+  display: -webkit-flex;
+  -webkit-flex-direction: column; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #fdc407;
   position: absolute;
   width: 4%;
   height: calc(100% - 145px);
   left: 90%;
-  text-align: center;
   color: #4DC9FF;
   line-height: 300%;
+  align-items: center;
+  align-content: center;
+}
+
+.ornament-content {
+  height: 10%;
+  font-size: calc(3.5vw);
+  font-weight: bold;
 }
 
 .ornament3 {
