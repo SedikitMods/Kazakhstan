@@ -246,12 +246,6 @@ body {
   text-align: center;
 }
 
-.inner-content #content-border {
-  width: 100%;
-  height: 5px;
-  background: black;
-}
-
 .sidebar {
   width: 30%;
   float: left;
@@ -265,20 +259,38 @@ body {
   border: 3px solid black;
 }
 
+.inner-sidebar h2 {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
 .inner-sidebar a {
   text-decoration: none;
 }
 
 .sidebar-regions {
   height: 50px;
+  text-align: center;
   color: black;
   font-size: 24px;
   font-weight: bold;
+  line-height: 50px;
+  border-top: 1px solid rgba(0,0,0,0);
+  border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 .sidebar-regions:hover {
   font-size: 26px;
-  background: rgb(253,29,29);
-  background: linear-gradient(90deg, rgba(253,29,29,1) 30%, rgba(255,149,0,1) 95%);
+  background: rgb(255,149,0);
+  background: linear-gradient(90deg, rgba(255,149,0,1) 0%, rgba(253,56,29,1) 50%, rgba(255,149,0,1) 100%);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   transition-duration: 0.5s;
+}
+
+#border {
+  width: 100%;
+  height: 5px;
+  background: black;
 }
