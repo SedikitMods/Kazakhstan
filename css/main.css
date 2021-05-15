@@ -103,9 +103,9 @@ body {
       text-align: right; }
       #header .header__top .header__top__menu ul > li {
         display: inline-block;
-        margin-right: 28px; }
+        margin-right: 42px; }
         #header .header__top .header__top__menu ul > li > a {
-          font-size: 21px;
+          font-size: 20px;
           font-weight: bold;
           text-decoration: none;
           color: black; }
