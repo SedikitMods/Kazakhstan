@@ -103,7 +103,7 @@ body {
       text-align: right; }
       #header .header__top .header__top__menu ul > li {
         display: inline-block;
-        margin-right: 42px; }
+        margin-right: 18px; }
         #header .header__top .header__top__menu ul > li > a {
           font-size: 20px;
           font-weight: bold;
@@ -118,43 +118,46 @@ body {
     border-bottom: 2px solid #fdc407;
     line-height: 46px;
     position: relative; }
-    #header .header__bottom nav {
-      margin-left: 17px; }
-      #header .header__bottom .categories {
-        display: flex;
-        justify-content: space-between; }
-        #header .header__bottom .categories .cat_item {
-          position: relative;
-          margin-right: 34px; }
-          #header .header__bottom .categories .cat_item .cat_link {
-          display: block;
-          text-decoration: none;
-          color: #fdc407;
-          font-size: 20px;
-          height: 50px;
-          padding: 0 10px; }
-          #header .header__bottom .categories .cat_item .cat_link:hover {
-            text-decoration: overline #fdc407;
-            cursor: default; }
-        #header .header__bottom .categories .cat_item:hover > .subcat {
-          display: block; }
-          #header .header__bottom .categories .cat_item .subcat {
-            display: none;
-            min-width: 100%;
-            position: absolute;
-            text-align: center;
-            top: 100%;
-            z-index: 1; }
-            #header .header__bottom .categories .cat_item .subcat .subcat_item {
-            background: #333;
-            border-bottom: 3px solid black; }
-              #header .header__bottom .categories .cat_item .subcat .subcat_item .subcat_link {
-              display: block;
-              text-decoration: none;
-              color: #D99111;
-              font-size: 18px; }
-                #header .header__bottom .categories .cat_item .subcat .subcat_item .subcat_link:hover {
-                background: #444; }
+    #header .header__bottom .categories {
+      display: flex;
+      justify-content: space-between; }
+      #header .header__bottom .categories .cat_item {
+        position: relative;
+        min-width: 20%;
+        text-align: center; }
+        #header .header__bottom .categories .cat_item .cat_link {
+        display: block;
+        text-decoration: none;
+        color: #fdc407;
+        font-size: 20px;
+        height: 50px;
+        padding: 0 10px; }
+        #header .header__bottom .categories .cat_item .cat_link:hover {
+          text-decoration: overline #fdc407;
+          cursor: default; }
+      #header .header__bottom .categories .cat_item:hover > .subcat {
+        display: block; }
+        #header .header__bottom .categories .cat_item .subcat {
+          display: none;
+          left: 15%;
+          min-width: 70%;
+          position: absolute;
+          text-align: center;
+          top: 100%;
+          z-index: 1; }
+          #header .header__bottom .categories .cat_item .subcat .subcat_item {
+          background: #333;
+          border-left: 2px solid black;
+          border-right: 2px solid black;
+          border-bottom: 3px solid black; }
+            #header .header__bottom .categories .cat_item .subcat .subcat_item .subcat_link {
+            display: block;
+            text-decoration: none;
+            color: #D99111;
+            font-size: 18px; }
+              #header .header__bottom .categories .cat_item .subcat .subcat_item .subcat_link:hover {
+              background: #444;
+              transition-duration: 0.4s; }
 
 .map {
   position: relative;
@@ -175,6 +178,7 @@ body {
 
 .region {
   fill: #fdc407;
+  transition: .15s;
 }
 
 .region:hover {
@@ -184,6 +188,7 @@ body {
 
 .city {
   fill: #00e600;
+  transition: .15s;
 }
 
 .city:hover {
@@ -206,7 +211,7 @@ body {
   width: 15%;
   height: 55%;
   box-shadow: 0 0 12px 4px black;
-  left: 10px;
+  left: 1%;
   bottom: calc(60% - 250px);
 }
 
@@ -256,6 +261,37 @@ body {
   border-radius: 0 40px 40px 0;
 }
 
+.btn {
+  position: fixed;
+  top: 88%;
+  left: 1%;
+  justify-content: center;
+  text-align: center;
+}
+
+.test_btn {
+  text-decoration: none;
+  font-size: 1.4vw;
+  color: black;
+  font-weight: bold;
+  width: 130%;
+  height: 50px;
+  display: flex;
+  line-height: 50px;
+  justify-content: center;
+  background:  linear-gradient(30deg, #fdc407, #fd6907, #fdc407);
+  background-size: 200%;
+  border-radius: 12% 12% 12% 12% / 50% 50% 50% 50%;
+  border: 3px solid black;
+  transition: .5s;
+}
+
+.test_btn:hover {
+  background-position: right;
+  font-size: 1.45vw;
+  width: 125.5%;
+}
+
 .content {
   width: 70%;
   float: left;
@@ -287,6 +323,48 @@ body {
 
 .content-block:target {
   display: block;
+}
+
+.content-about {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3% 5% 0 5%;
+  margin-bottom: 50px;
+}
+
+.inner-content-about {
+  background: rgb(77,201,255);
+  background: -moz-radial-gradient(circle, rgba(77,201,255,1) 15%, rgba(77,122,255,1) 95%);
+  background: -webkit-radial-gradient(circle, rgba(77,201,255,1) 15%, rgba(77,122,255,1) 95%);
+  background: radial-gradient(circle, rgba(77,201,255,1) 15%, rgba(77,122,255,1) 95%);
+  min-height: 100px;
+  padding: 2%;
+  box-shadow: 6px 6px 15px #000 inset;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5%;
+}
+
+.card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-item {
+  background-color: #fdc407;
+  width: 250px;
+  transition: transform 0.2s;
+  padding: 2%;
+  text-align: center;
+  border-radius: 5% 5% 0 0 / 5% 5% 0 0;
+}
+
+.card-item > img {
+  width: 100%;
 }
 
 .sidebar {
@@ -350,7 +428,10 @@ body {
 
 #author {
   margin-top: 15px;
-  text-align: right;
   font-size: 24px;
   font-style: oblique;
+}
+
+#bold {
+  font-weight: bold;
 }
