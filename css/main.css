@@ -310,10 +310,6 @@ body {
   box-shadow: 6px 6px 15px #000 inset;
 }
 
-.inner-content h1 {
-  text-align: center;
-}
-
 .content-block {
   display: none;
   font-size: 20px;
@@ -323,6 +319,53 @@ body {
 
 .content-block:target {
   display: block;
+}
+
+.content-block > img {
+  margin: 10px 0;
+}
+
+.personsBtn {
+  position: relative;
+  cursor: pointer;
+}
+
+.personsBtn:before,
+.personsBtn:after {
+  content: '';
+  width: 10px;
+  height: 3px;
+  background-color: #fdc407;
+  position: absolute;
+  top: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.personsBtn:before {
+  transform: rotate(40deg);
+  left: 95%;
+}
+
+.personsBtn:after {
+  transform: rotate(-40deg);
+  left: calc(95% + 6px);
+}
+
+.personsBtn.active:before,
+.personsBtn.active:after {
+  background-color: #fd6907;
+}
+
+.personsBtn.active:before {
+  transform: rotate(-40deg);
+}
+
+.personsBtn.active:after {
+  transform: rotate(40deg);
+}
+
+.personsInfo {
+  display: none;
 }
 
 .content-about {
@@ -357,10 +400,11 @@ body {
 .card-item {
   background-color: #fdc407;
   width: 250px;
+  min-height: 400px;
   transition: transform 0.2s;
   padding: 2%;
   text-align: center;
-  border-radius: 5% 5% 0 0 / 5% 5% 0 0;
+  border-radius: 5% 5% 5% 5% / 5% 5% 3% 3%;
 }
 
 .card-item > img {
