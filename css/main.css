@@ -463,6 +463,119 @@ body {
   transition-duration: 0.5s;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: .7;
+}
+
+.quizModal {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  min-width: 30%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+.modalContent {
+  background-color: brown;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+
+.quizContent {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 25% 0 25%;
+  margin-bottom: 50px;
+}
+
+.quizContainer {
+  background: rgb(253,196,7);
+  background: -moz-linear-gradient(0deg, rgba(253,196,7,1) 0%, rgba(255,174,0,1) 70%);
+  background: -webkit-linear-gradient(0deg, rgba(253,196,7,1) 0%, rgba(255,174,0,1) 70%);
+  background: linear-gradient(0deg, rgba(253,196,7,1) 0%, rgba(255,174,0,1) 70%);
+  border: 3px solid black;
+  box-shadow: 2px 4px 5px #000;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.questionNumber {
+  padding: 15px 0;
+}
+
+#question {
+  margin-top: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.variant {
+  background-color: #fd6907;
+  min-height: 40px;
+  margin: 2% 20% 0 20%;
+  border: 2px solid black;
+  border-radius: 15px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.variant:hover {
+  background-color: #D99111;
+  cursor: pointer;
+}
+
+.variants > div.correct {
+  background-color: green;
+}
+
+.variants > div.wrong {
+  background-color: red;
+}
+
+.variants div.disabled {
+  pointer-events: none;
+}
+
+.quizContainer > #answersChecker {
+  min-height: 60px;
+  display: flex;
+}
+
+#answersChecker > div {
+  margin-top: 10px;
+  margin-left: 3%;
+  background-color: grey;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+#answersChecker > div.correct {
+  background-color: green;
+}
+
+#answersChecker > div.wrong {
+  background-color: red;
+}
+
 .scrollUp {
   position: fixed;
   right: 50px;
