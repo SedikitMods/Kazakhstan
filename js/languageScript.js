@@ -13,7 +13,7 @@ function changeLanguage() {
     hash = hash.substr(1);
     if (!allLang.includes(hash)) {
         location.href = window.location.pathname + '#ru';
-        location.reload;
+        location.reload();
     };
     select.value = hash;
     document.querySelector('title').innerHTML = langArr['title'][hash];
