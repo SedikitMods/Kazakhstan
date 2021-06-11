@@ -137,7 +137,7 @@ body {
       margin-right: 5px;
       text-align: center;
       line-height: 0.9; }
-      #header .header__top .header__top__content .header__top__logo .mainlogo {
+      #header .header__top .header__top__content .header__top__logo .lng-mainlogo {
         font-weight: bold;
         font-size: 40px;
         color: white; }
@@ -154,6 +154,23 @@ body {
           color: white; }
           #header .header__top .header__top__menu ul > li > a:hover {
             border-bottom: 3px solid white; }
+            #header .header__top .header__top__menu ul > li > .select {
+              position: relative; }
+              #header .header__top .header__top__menu ul > li > .select select {
+                background: none;
+                border: 0;
+                outline: 0;
+                -webkit-appearance: none;
+                appearance: none;
+                color: white;
+                font-family: inherit;
+                font-weight: bold;
+                font-size: 17px; }
+              #header .header__top .header__top__menu ul > li > .select select:hover {
+                border-bottom: 3px solid white; }
+                #header .header__top .header__top__menu ul > li > .select select option {
+                  color: #000;
+                  font-weight: bold; }
   #header .header__bottom {
     height: 50px;
     background-color: rgba(0,0,0,.6);
@@ -714,7 +731,7 @@ body {
 }
 
 .slider-item img {
-  width: 85%;
+  width: 60%;
 }
 
 .slider .slick-arrow {
@@ -750,6 +767,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .slider .slick-dots li{
