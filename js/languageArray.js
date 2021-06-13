@@ -71,7 +71,7 @@ const langArr = {
     },
     "artists": {
         "en": "Artists",
-        "ru": "Художницы",
+        "ru": "Художники",
         "kz": "Суретшілер",
     },
     "heroes": {
